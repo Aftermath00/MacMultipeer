@@ -130,6 +130,7 @@ class MacMultipeerConnectivityManager: NSObject, ObservableObject {
         DispatchQueue.main.async {
             if let element = self.elementAssignments[peerID] {
                 self.elementMessages[element, default: []].append("\(peerID.displayName):\(message)")
+                print("Debug: View model \(self.elementMessages)")
                 // Broadcast the message to all peers
                 self.sendMessage("ElementMessage:\(element):\(message)")
             }

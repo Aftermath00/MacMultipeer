@@ -26,7 +26,7 @@ struct MacMultipeerTestView: View {
             }
             .disabled(viewModel.isHosting)
             .padding()
-
+        
             Text("Connected Peers:")
                 .font(.headline)
             List(viewModel.connectedPeers, id: \.self) { peer in
